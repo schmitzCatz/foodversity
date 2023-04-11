@@ -1,0 +1,43 @@
+@startuml
+title Domain Model Components and Dependencies
+skinparam linetype ortho
+
+component commons {
+    artifact Id
+}
+component user {
+    artifact User
+}
+
+component units {
+    artifact body
+    artifact energy
+    artifact length
+    artifact weight
+    artifact numeric
+
+    body --> length
+    body --> weight
+    length --> numeric
+    weight --> numeric
+    energy --> numeric
+}
+
+component logbook{
+    artifact WeightLogbook
+}
+
+component food {
+    artifact food
+}
+
+user ..> commons :use
+user ..> units :use
+
+logbook ..> commons :use
+logbook ..> units :use
+
+food ..> units :use
+food ..> commons :use
+food ..> user
+@enduml
