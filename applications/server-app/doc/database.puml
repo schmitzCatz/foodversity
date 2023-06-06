@@ -1,0 +1,24 @@
+@startuml Foodversity-Database
+skinparam linetype ortho
+
+component Grocery as GroceryComponent {
+    entity Product {}
+    entity Shop {}
+    entity ShoppingList{}
+}
+
+component Food as FoodComponent {
+    entity Meal {}
+    entity Allergen {}
+    entity Nutrition {}
+    entity Recipe {}
+}
+
+component User as UserComponent  {
+    entity User {
+
+    }
+    entity Person { }
+}
+
+@enduml

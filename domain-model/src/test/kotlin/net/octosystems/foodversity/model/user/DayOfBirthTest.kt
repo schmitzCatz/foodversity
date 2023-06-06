@@ -4,7 +4,7 @@ import assertk.assertThat
 import assertk.assertions.isFailure
 import assertk.assertions.isSuccess
 import assertk.assertions.messageContains
-import net.octosystems.foodversity.model.person.DayOfBirth
+import net.octosystems.foodversity.model.user.person.DayOfBirth
 import org.junit.jupiter.api.Test
 import java.time.Instant
 

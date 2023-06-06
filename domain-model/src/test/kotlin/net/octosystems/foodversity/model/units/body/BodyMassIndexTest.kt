@@ -10,6 +10,6 @@ class BodyMassIndexTest {
 
     @Test
     fun `Test metric BMI calculation kg times m pow 2`() {
-        assertThat(BodyMassIndex.of(130.0, 1.82).value).isEqualTo(NumericDouble(130.0 / 1.82.pow(2.0)))
+        assertThat(net.octosystems.foodversity.model.common.units.body.BodyMassIndex.of(130.0, 1.82).value).isEqualTo(NumericDouble(130.0 / 1.82.pow(2.0)))
     }
 }

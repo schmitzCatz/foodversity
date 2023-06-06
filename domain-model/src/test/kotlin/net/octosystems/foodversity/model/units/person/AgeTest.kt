@@ -3,7 +3,7 @@ package net.octosystems.foodversity.model.units.person
 import assertk.assertThat
 import assertk.assertions.isFailure
 import assertk.assertions.messageContains
-import net.octosystems.foodversity.model.person.Age
+import net.octosystems.foodversity.model.user.person.Age
 import org.junit.jupiter.api.Test
 
 class AgeTest {
