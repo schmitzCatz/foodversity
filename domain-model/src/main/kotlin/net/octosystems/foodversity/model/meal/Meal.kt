@@ -5,7 +5,7 @@ import net.octosystems.foodversity.model.meal.recipe.Recipe
 import java.time.Instant
 
 data class Meal(
-    val data: Instant,
+    val date: Instant,
     val recipe: Recipe?,
     val cook: Person,
     val participants: List<Person>,

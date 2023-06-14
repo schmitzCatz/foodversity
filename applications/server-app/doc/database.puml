@@ -2,23 +2,89 @@
 skinparam linetype ortho
 
 component Grocery as GroceryComponent {
-    entity Product {}
-    entity Shop {}
-    entity ShoppingList{}
+    entity Product {
+        * id : UUID
+        ---
+        * created_by: UUID
+        * created_at: timestamp
+        * updated_at: timestamp
+    }
+    entity Shop {
+        * id : UUID
+        ---
+        * created_by: UUID
+        * created_at: timestamp
+        * updated_at: timestamp
+    }
+    entity ShoppingList{
+        * id : UUID
+        ---
+        * created_by: UUID
+        * created_at: timestamp
+        * updated_at: timestamp
+    }
 }
 
 component Food as FoodComponent {
-    entity Meal {}
-    entity Allergen {}
-    entity Nutrition {}
-    entity Recipe {}
+    entity Meal {
+        * id : UUID
+        ---
+        date: DATETIME
+        * created_by: UUID
+        * created_at: timestamp
+        * updated_at: timestamp
+    }
+    entity Allergen {
+        * id : UUID
+        ---
+        * created_by: UUID
+        * created_at: timestamp
+        * updated_at: timestamp
+    }
+    entity Nutrition {
+        * id : UUID
+        ---
+        * created_by: UUID
+        * created_at: timestamp
+        * updated_at: timestamp
+    }
+    entity Recipe {
+        * id : UUID
+        ---
+        name: VARCHAR
+        description: TEXT
+        cover: URI
+        * created_by: UUID
+        * created_at: timestamp
+        * updated_at: timestamp
+    }
+
+    Meal ||--|{ Recipe
+    Meal ||--|| User : Author
+    Meal ||--|{ Person : Participants
 }
 
 component User as UserComponent  {
     entity User {
-
+        * id : UUID
+        ---
+        * email : VARCHAR
+        * password : TEXT
+        avatar : URI
     }
-    entity Person { }
+    entity Person {
+        * id : UUID
+        ---
+        * created_by: UUID
+        * created_at: timestamp
+        * updated_at: timestamp
+        * name : VARCHAR
+        day_of_birth: DATE
+        sex: VARCHAR
+        height: NUMBER
+    }
+    User ||--|| Person : person_id
+    User ||--|{ Person : acquaintance
 }
 
 @enduml
