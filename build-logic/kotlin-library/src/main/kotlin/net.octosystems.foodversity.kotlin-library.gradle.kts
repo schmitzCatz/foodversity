@@ -6,4 +6,6 @@ plugins {
 
 dependencies {
     implementation(kotlin("stdlib"))
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core")
+    runtimeOnly("org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm")
 }

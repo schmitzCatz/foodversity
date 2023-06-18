@@ -1,4 +1,5 @@
--- Initial database setup Version 1.0
+--liquibase formatted sql
+--changeset oschmitz:1 dbms:postgresql
 -- Clean Up
 DROP TABLE IF EXISTS "Person" CASCADE ;
 DROP TABLE IF EXISTS "User" CASCADE ;
